@@ -15,4 +15,3 @@ menulink.forEach(element => {
 function changer (name) {
     if (name === 'menu menu_sub') return 'menu menu_sub menu_active';
     else if (name === 'menu menu_sub menu_active') return 'menu menu_sub';
-}
