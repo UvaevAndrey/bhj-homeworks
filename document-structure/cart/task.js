@@ -27,12 +27,14 @@ quantity.forEach(element => {
     }
 
     function addCart(val,image,id) {
-        if (findincart(id) === undefined){
+       if (findincart(id) === undefined){
+          if (val.innerText > 0) {
             let cartelement = document.createElement('div')
             cartelement.innerHTML = `<img class="cart__product-image" src="${image.src}" alt="" class="product__image">`+`<div class="cart__product-count">${val.innerText}</div>`;
             cartelement.setAttribute('class','cart__product')  ;     
             cartelement.setAttribute('data-id',id);
             totalCart.querySelector('.cart__products').appendChild(cartelement)
+          }
         }
         else {
             findincart(id).querySelector('.cart__product-count').textContent = 
